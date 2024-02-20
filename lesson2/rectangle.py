@@ -10,8 +10,20 @@
 """
 
 
-class Rectangle:
-    pass
+class Rectangle():
+
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def area(self):
+        return self.a * self.b
+
+    def perimeter(self):
+        return (self.a + self.b) * 2
+
+    def display(self):
+        return f'Длина: {self.a}\nШирина: {self.b}\nПлощадь: '
 
 
 # код для проверки 

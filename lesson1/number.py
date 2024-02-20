@@ -15,16 +15,18 @@
 class Number:
 
     def __init__(self, value):
-        ...
+        self.value = value
 
-    def ...(self):
-        ...
+    def get(self):
+        return self.value
 
-    def ...:
-        ...
+    def add(self, value_add):
+        self.value = self.value + value_add
+        return self.value
 
-    def ...:
-        ...
+    def substract(self, substract_value):
+        self.value = self.value - substract_value
+        return self.value
 
 
 # код для проверки 
