@@ -14,7 +14,29 @@
 
 
 class User:
-    pass
+
+    def __init__(self, name, password):
+        self.__name = name
+        self.__password = password
+        self.is_admin = False
+
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def password(self):
+        return self.__password
+
+
+    @password.setter
+    def password(self, new_password):
+        self.__password = new_password
+
+
+    @_is_admin.setter
+    def _is_admin
+
 
 
 # код для проверки 

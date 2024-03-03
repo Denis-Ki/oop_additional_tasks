@@ -22,7 +22,17 @@ class BankAccount:
         return self.__balance
 
     def deposit(self, amount):
-        return self.__balance + amount
+        if amount > 0:
+            self.__balance += amount
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+
+    def close(self):
+        remaining_balance = self.__balance
+        self.__balance = 0
+        return remaining_balance
 
 
 # код для проверки 
@@ -32,8 +42,8 @@ print(account.balance)  # 1000
 account.deposit(500)
 print(account.balance)  # 1500
 #
-# account.withdraw(200)
-# print(account.balance)  # 1300
+account.withdraw(200)
+print(account.balance)  # 1300
 #
-# account.close()
-# print(account.balance)  # 0
+account.close()
+print(account.balance)  # 0
